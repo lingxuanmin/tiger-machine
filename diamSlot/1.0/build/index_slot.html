@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>苏宁会员联盟_会员等级 - 苏宁易购</title>
+    <meta name="keywords" content="&#x82CF;&#x5B81;&#x4F1A;&#x5458;&#x8054;&#x76DF;,&#x4F1A;&#x5458;&#x7B49;&#x7EA7;,&#x4F1A;&#x5458;&#x4E2D;&#x5FC3;,&#x4E91;&#x94BB;&#x5151;&#x6362;,&#x4F18;&#x60E0;&#x5238;,&#x4FC3;&#x9500;&#x6D3B;&#x52A8;">
+    <meta name="description" content="&#x82CF;&#x5B81;&#x4F1A;&#x5458;&#x7B49;&#x7EA7;&#x9891;&#x9053;,&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x4F1A;&#x5458;&#x6210;&#x957F;&#x8FDB;&#x5EA6;,&#x5347;&#x7EA7;&#x65B9;&#x6CD5;,&#x6743;&#x76CA;&#x4E0E;&#x7B49;&#x7EA7;,&#x4E0A;&#x82CF;&#x5B81;&#x4F1A;&#x5458;&#x8054;&#x76DF;,&#x7ED9;&#x4F60;&#x5168;&#x65B0;&#x7684;&#x4EF7;&#x503C;&#x4F53;&#x9A8C;&#xFF01;">
+    <script>
+        var sn = sn || {}
+    </script>
+
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <link rel="stylesheet" href="./assets/css/vipcommon.css">
+
+    <link rel="stylesheet" href="./assets/css/vipSuning.css">
+
+    <link rel="stylesheet" href="./assets/css/vipNew.css">
+
+    <link rel="stylesheet" href="./assets/css/diamSlot.css">
+
+    <link rel="stylesheet" href="./assets/css/sn_dialog.css">
+
+
+    <!--[if IE 6]>
+    <script type="text/javascript">
+        DD_belatedPNG.fix(".header .logo img");
+        DD_belatedPNG.fix(".game  img");
+        DD_belatedPNG.fix(".wrapper-slot .game-zone");
+        DD_belatedPNG.fix(".lucky-head");
+        DD_belatedPNG.fix(".guide-wrap .gesture");
+        DD_belatedPNG.fix(".guide-wrap .guide-tips");
+        DD_belatedPNG.fix(".opt-diam .diam-less");
+        DD_belatedPNG.fix(".opt-diam .diam-more");
+        DD_belatedPNG.fix(".opt-zone .game-start");
+        DD_belatedPNG.fix(".diam");  
+        DD_belatedPNG.fix(".l-start");
+        DD_belatedPNG.fix(".slot");
+        DD_belatedPNG.fix(".empty-lucky-list"); 
+        DD_belatedPNG.fix(".mask-btn");   
+        DD_belatedPNG.fix(".mask-img img");
+    </script>
+    <![endif]-->
+</head>
+<body>
+
+
+    <!-- 顶部悬浮导航 [[ -->
+    <!--#include virtual="_fixed-nav.html"-->
+    <!-- 顶部悬浮导航 ]] -->
+
+    <div class="vip-wrapper wrapper-bottom">
+        <!--底层背景-->
+        <div class="vip-wrapper wrapper-up">
+            <!--上层背景-->
+
+            <!--云钻头部[[-->
+            <!--#include virtual="_header.html"-->
+
+            <!--]]云钻头部-->
+            <div class="second-wrapper clearfix sn-index">
+                <div class="product-list">
+                    <!-- 面包屑 [[ -->
+                    <div class="product-list-hd product-list-hd-first">
+                        <h3 class="member-title">
+                            <span>首页</span><i>&gt;</i><em>云钻大乐透</em>
+                        </h3>
+                    </div>
+                  </div>
+
+                <!-- 拉霸主体[[ -->
+                <div class="wrapper-slot clearfix">
+                    <!-- main -->
+                    <div class="game-zone">
+                        <!-- 云钻翻倍说明 -->
+                        <div class="award-tips">
+                            <div class="a-tip1">最多可<span class="num">X10</span>倍</div>
+                            <div class="a-tip2">单次最多可押<span class="num">500</span>云钻</div>
+                        </div>
+                        <!-- 活动规则 -->
+                        <div class="game-tips">
+                            <div>活动规则简单介绍</div>
+                            <div>活动规则简单15字内介绍</div>
+                        </div>
+                        <!-- 媚眼 -->
+                        <div class="meiyan">
+                            <img src="temp/meiyan.gif" alt="&#x5A9A;&#x773C;">
+                        </div>
+
+                        <!-- 卡片区 -->
+                        <div class="card-zone clearfix">
+                            <div id="machine1" class="slot slotMachine">
+                                
+                            </div>
+                            <div id="machine2" class="slot slotMachine">
+                                
+                            </div>
+                            <div id="machine3" class="slot slotMachine">
+                               
+                            </div>
+                        </div>
+
+                        <!-- 闪光灯 -->
+                        <div class="flash-light">
+                            <div class="light light1"><span id="start1"></span></div>
+                            <div class="light light2"><span id="start2"></span></div>
+                            <div class="light light3"><span id="start3"></span></div>
+                            <div class="light light4"><span id="start6"></span></div>
+                            <div class="light light5"><span id="start5"></span></div>
+                            <div class="light light6"><span id="start4"></span></div>
+                        </div>
+                        <!-- 操作区 -->
+                        <div class="opt-zone clearfix">
+                            <div class="opt-diam clearfix">
+                                <a href="javascript:void(0);" class="diam-less"></a>
+                                <div class="dinput-wrap clearfix">
+                                    <input type="text" class="diam-num">
+                                    <span class="diam-desc">云钻</span>
+                                </div>
+                                <a href="javascript:void(0);" class="diam-more "></a>
+                            </div>
+                            <!-- 立即翻倍 -->
+                            <a href="javascript:void(0);" class="game-start">立即翻倍</a>
+                        </div>
+                    </div>
+
+                    <!-- 幸运榜 -->
+                    <div class="lucky-zone">
+                        <div class="lucky-head"></div>
+                        <!-- 幸运榜为空 -->
+                        <!-- <div class="empty-lucky-list">
+                            
+                        </div> -->
+
+                        <div class="list-wrap">
+                            
+                            <ul class="lucky-list">
+                                <li class="first-index">
+                                    <div class="li-content">
+                                        <div class="user-img"><img src="temp/head.png" alt="&#x7528;&#x6237;&#x5934;&#x50CF;"></div>
+                                        <div class="user-name">111111111111</div>
+                                        <div class="user-award">云钻<span class="split">x</span>10倍</div>
+                                    </div>
+                                    <div class="mask">
+                                        <i class="point1"></i>
+                                        <i class="point2"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li-content">
+                                        <div class="user-img"><img src="temp/head.png" alt="&#x7528;&#x6237;&#x5934;&#x50CF;"></div>
+                                        <div class="user-name">2222222222222</div>
+                                        <div class="user-award">云钻<span class="split">x</span>10倍</div>
+                                    </div>
+                                    <div class="mask">
+                                        <i class="point1"></i>
+                                        <i class="point2"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li-content">
+                                        <div class="user-img"><img src="temp/head.png" alt="&#x7528;&#x6237;&#x5934;&#x50CF;"></div>
+                                        <div class="user-name">33333333333</div>
+                                        <div class="user-award">云钻<span class="split">x</span>10倍</div>
+                                    </div>
+                                    <div class="mask">
+                                        <i class="point1"></i>
+                                        <i class="point2"></i>
+                                    </div>
+                                </li>
+                                 <li>
+                                    <div class="li-content">
+                                        <div class="user-img"><img src="temp/head.png" alt="&#x7528;&#x6237;&#x5934;&#x50CF;"></div>
+                                        <div class="user-name">4444四大皆空健康打卡555</div>
+                                        <div class="user-award">云钻<span class="split">x</span>10倍</div>
+                                    </div>
+                                     <div class="mask">
+                                        <i class="point1"></i>
+                                        <i class="point2"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li-content">
+                                        <div class="user-img"><img src="temp/head.png" alt="&#x7528;&#x6237;&#x5934;&#x50CF;"></div>
+                                        <div class="user-name">5555555555555555</div>
+                                        <div class="user-award">云钻<span class="split">x</span>10倍</div>
+                                    </div>
+                                     <div class="mask">
+                                        <i class="point1"></i>
+                                        <i class="point2"></i>
+                                    </div>
+                                </li>
+                                 <li>
+                                    <div class="li-content">
+                                        <div class="user-img"><img src="temp/icon64.png" alt="&#x7528;&#x6237;&#x5934;&#x50CF;"></div>
+                                        <div class="user-name">6666666666四大皆空健康打卡555</div>
+                                        <div class="user-award">云钻<span class="split">x</span>10倍</div>
+                                    </div>
+                                     <div class="mask">
+                                        <i class="point1"></i>
+                                        <i class="point2"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li-content">
+                                        <div class="user-img"><img src="temp/head.png" alt="&#x7528;&#x6237;&#x5934;&#x50CF;"></div>
+                                        <div class="user-name">77777777777</div>
+                                        <div class="user-award">云钻<span class="split">x</span>10倍</div>
+                                    </div>
+                                     <div class="mask">
+                                        <i class="point1"></i>
+                                        <i class="point2"></i>
+                                    </div>
+                                </li>
+
+                            </ul> 
+                        </div>
+                    </div>
+
+                    <!-- 指引 -->
+                    <div class="guide-wrap">
+                        <div class="gesture"></div>
+                        <div class="guide-tips"></div>
+                    </div>
+                </div>
+
+                <!-- 拉霸主体]] -->
+                <!-- 尾部说明 -->
+                <div class="game-desc-wrap">
+                    <div class="desc-head clearfix">
+                        <i class="diam"></i>
+                        <span>抽奖规则</span>
+                        <i class="diam"></i>
+                    </div>
+                    <div class="des-main clearfix">
+                        <p>规则说明，规则说明规则说明规则说明规则说明规则说明规则说明规则说明规则说明规则说明规则说明</p>
+                        <p>规则说明，规则说明规则说明规则说明规则说明规则明规则说明规则说明明规则说明规则说明明规则说明规则说明明规则说明规则说明明规则说明规则说明明规则说明规则说明说明规则说明规则说明规则说明规则说明规则说明规则说明规则说明规则说明规则说明规则</p>
+                        <p>规则说明规则说明规则说明1111111111111111111111111111111111111111111111111444444444444444444444444444444444444444455555555555555555555555555555555555555</p>
+                        <p>规则说明，规则说明规则说明规则说明规则说明规则说明规则说明规则说明规则说明规则说明规则说明</p>
+                        <p>奖品为优惠券，说明说明说明说明说明，可在 <a href="#" target="_blank">我的易购</a> > <a href="" target="_blank">我的优惠券</a> 中查看；
+                        </p>
+                        <p>奖品为云钻，说明说明说明说明说明，可在<a href="#" target="_blank"> 我的云钻 </a>中查看。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 蒙层[[ -->
+    <div class="mask-zone">
+        <div class="mask"></div>
+        <div class="mask-content">
+            <div class="mask-img"><img src="temp/mask_img.png" alt="&#x4E91;&#x94BB;&#x5151;&#x65E0;&#x654C;&#x5238;"></div>
+            <a href="javascript:void(0);" class="mask-btn" title="&#x6211;&#x77E5;&#x9053;&#x4E86;">我知道了(<i>8</i>)</a>
+        </div>
+    </div>
+    <!-- 蒙层]] -->
+
+    <!-- 返回顶部 [[ -->
+    <div class="go-top"><a href="javascript:void(0);" title="&#x8FD4;&#x56DE;&#x9876;&#x90E8;"><i></i></a></div>
+    <!-- 返回顶部 ]] -->
+
+    <!-- 引入项目js资源文件,并配置构建地址演示 -->
+    <script src="./assets/js/home.js"></script>
+    <script src="./assets/js/vipSuning.js"></script>
+    
+    <script src="./assets/js/dialog.js"></script>
+
+    <!-- endbuild -->
+    <script src="./assets/js/swfobject.js"></script>
+    <script src="./assets/js/easing.js"></script>
+    <script src="./assets/js/posiTool.js"></script>
+    <script src="./assets/js/diamSlot.js"></script>
+
+    <script type="text/javascript">
+
+        var params = {  
+            menu: "false",  
+            scale: "true",  
+            allowFullscreen: "true",  
+            allowScriptAccess: "always",  
+            wmode:"transparent",
+            autoplay: "true"
+        };  
+        //星光轮流
+        var index = 1;
+        var t = setInterval(function(){
+            if(index == 7){
+                clearInterval(t);
+                return;
+            }
+            swfobject.embedSWF("temp/star.swf", "start"+index, "50", "40", "9.0.0","star.swf",{},params);
+            $("#start"+index).parent().addClass("l-start");
+            index++;
+        },300);
+
+    //游戏动画
+    diamSlot.game.init({
+    cardHeight: '128',
+    cardLength: 2,//卡片数量
+    baseNumber: 50,//赌注基数
+    numberStep: 50,//赌注加减步幅
+    maxNum: 500,//最大可以设置赌注
+    minNum: 50});
+
+    $('.game-start').click(function(){
+        diamSlot.game.play(function(){
+            return "temp/jsonp.json"
+        },function(state, msgJson){
+            //回调弹框  可根据接口返回值弹框
+            alert(state);
+        });
+    });
+        
+    </script>
+    
+</body>
+</html>

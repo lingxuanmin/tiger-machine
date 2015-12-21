@@ -1,0 +1,530 @@
+/*拉霸样式*/
+/*html,body{ height: 100%;}*/
+.wrapper-slot{
+	float: left;
+	width: 990px;
+	height: 640px;
+	margin: 12px auto 0;
+	background: url(images/slot_bg.jpg) no-repeat 0 0;
+	overflow: hidden;
+
+	.game-zone{
+		position: relative;
+		float: left;
+		margin: 15px 0  0 105px;
+		height: 590px;
+		width: 402px;
+		background: url(images/games_bg.png);
+		_display:inline;
+		.award-tips{
+			position: absolute;
+			left: 114px;
+			top:88px;
+			width: 160px;
+			height: 36px;
+			font: normal 14px/18px 'Microsoft Yahei';
+			color: #ffeb99; 
+			overflow: hidden;
+			.num{
+				font-weight: bold;
+				color: #fefefe;
+			}
+			.a-tip1{
+				width: 110px;
+				height: 18px;
+				margin: 0 auto;
+				text-align: center;
+				overflow: hidden;
+			}
+			.a-tip2{
+				width: 160px;
+				height: 18px;
+				margin: 0 auto;
+				text-align: center;
+				overflow: hidden;
+			}
+		}
+
+		.game-tips{
+			position: absolute;
+			top: 168px;
+			left: 121px;
+			width: 168px;
+			height: 36px;
+			font: normal 14px/18px 'Microsoft Yahei';
+			color: #ffeb99; 
+			text-align: center;
+			overflow: hidden;
+		}
+
+		/*媚眼*/
+		.meiyan{
+			position: absolute;
+			left: -26px;
+			top: 95px;
+			width: 128px;
+			height: 128px;
+			overflow: hidden;
+			img{
+				display: block;
+				width: 128px;
+				height: 128px;
+			}
+		}
+		/*卡片区*/
+		.card-zone{
+			position: absolute;
+			top: 270px;
+			left: 52px;
+			width: 318px;
+			height: 128px;
+			overflow: hidden;
+			.slotMachine{
+				float: left;
+				width: 96px;
+				height: 128px;
+				margin-right: 10px;
+				overflow: hidden;
+				&.slot{
+					background: url(images/slot_list.png) repeat-y 0 0;
+				}
+			}
+		}
+
+		/*闪光灯*/
+		.flash-light{
+			.light{
+				position: absolute;
+				width: 50px;
+				height: 40px;
+				overflow: hidden;
+				
+			}
+			.l-start{
+				background: url(images/star.png) no-repeat 0 0;
+			}
+			.light1{
+				left: 75px;
+				top:232px;
+			}
+			.light2{
+				left: 180px;
+				top:232px;
+			}
+			.light3{
+				left: 287px;
+				top:232px;
+			}
+			.light4{
+				left: 75px;
+				top:392px;
+			}
+			.light5{
+				left: 180px;
+				top:392px;
+			}
+			.light6{
+				left: 287px;
+				top:392px;
+			}
+		}
+
+		/*操作区*/
+		.opt-zone{
+			position: absolute;
+			top: 450px;
+			left: 60px;
+			.opt-diam{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 300px;
+				height: 48px;
+				overflow: hidden;
+
+				.diam-less{
+					float: left;
+					display: block;
+					width: 43px;
+					height: 43px;
+					overflow: hidden;
+					background: url(images/sprite_slot.png) no-repeat  -171px -52px;
+					&.less-disabled{
+						cursor: not-allowed;
+						background: url(images/sprite_slot.png) no-repeat  -214px -100px;
+					}
+					&.less-click{
+						background: url(images/sprite_slot.png) no-repeat  -214px -52px;
+					}
+
+					
+				}
+				.diam-more{
+					float: right;
+					display: block;
+					_display:inline;
+					width: 43px;
+					height: 43px;
+					margin-right: 12px;
+
+					overflow: hidden;
+					background: url(images/sprite_slot.png) no-repeat  -171px 0;
+					z-index: 100;
+					position: relative;
+					&.more-click{
+						background: url(images/sprite_slot.png) no-repeat  -214px 0;
+					}
+					&.more-disabled{
+						cursor: not-allowed;
+						background: url(images/sprite_slot.png) no-repeat  -170px -100px;
+					}
+				}
+				.dinput-wrap{
+					float: left;
+					width: 174px;
+					height: 44px;
+					margin-left: 13px;
+					background-color: #490802;
+					border:2px solid #f1a500;
+					border-radius: 12px;
+					overflow: hidden;
+
+					.diam-num{
+						float: left;
+						width: 95px;
+						height: 44px;
+						margin: 0 4px 0 16px;
+						border: none;
+						text-align: center;
+						background-color: #490802;
+						font:bold 22px/44px 'Microsoft Yahei';
+						color: #FFF;
+
+					}
+					.diam-desc{
+						float: left;
+						font:normal 16px/44px 'Microsoft Yahei';
+						color: #fed63d;
+					}
+				}
+
+			}
+			.game-start{
+				position: absolute;
+				left: 60px;
+				top: 55px;
+				display: block;
+				width: 170px;
+				height: 52px;
+				text-align: center;
+				font:bold 26px/48px 'Microsoft Yahei';
+				color: #FFF;
+				background: url(images/sprite_slot.png) no-repeat 0 0;
+				&.game-btn-click{
+					background: url(images/sprite_slot.png) no-repeat 0 -127px;
+				}
+			}
+
+		}
+	}
+
+	/*幸运榜*/
+	.lucky-zone{
+		float: right;
+		position: relative;
+		width: 330px;
+		height: auto;
+		margin: 90px 50px 0 0;
+		.lucky-head{
+			width: 201px;
+			height: 53px;
+			margin: 0 auto;
+			background: url(images/lucky_head.png) no-repeat 0 0;
+			overflow: hidden;
+		}
+		.empty-lucky-list{
+			width: 330px;
+			height: 421px;
+			background: url(images/empty_bg.png) no-repeat 0 0;
+			overflow: hidden;
+		}
+		
+		.list-wrap{
+			position: relative;
+			width: 330px;
+			height: 425px;
+			overflow: hidden;
+			.lucky-list{
+				width: 330px;
+				position: relative;
+				li{
+					position: absolute;
+					left: 0;
+					top: 0;
+					/*float: left;*/
+					width: 330px;
+					height: 70px;
+					border-bottom: 1px solid #9f3672;
+					.li-content{
+						position: absolute;
+						left: 0;
+						
+						width: 330px;
+						height: 70px;
+						font-size: 16px;
+						line-height: 70px;
+
+						overflow: hidden;
+						z-index: 2;
+					
+						.user-img{
+							float: left;
+							width: 40px;
+							height: 40px;
+							margin: 15px 15px 15px 40px;
+							border-radius: 50%;
+							overflow: hidden;
+							_display:inline;
+							img{
+								display: block;
+								width: 40px;
+								height: 40px;
+
+							}
+						}
+						.user-name{
+							float: left;
+							height: 70px;
+							width: 110px;
+							white-space: nowrap;
+							text-overflow:ellipsis;
+							text-align: left;
+							color: #ffd632;
+							overflow: hidden;
+						}
+						.user-award{
+							float: left;
+							width: 100px;
+							height: 70px;
+							margin-left: 20px;
+							color: #FFF;
+							white-space: nowrap;
+							overflow: hidden;
+							.split{
+								margin: 0 4px;
+							}
+						}
+					}
+					.mask{
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 330px;
+						height: 70px;
+						background-color: #000;
+						opacity: .3;
+						filter:alpha(opacity=30);
+						z-index: 1;
+						i{
+							position: absolute;
+							top: 10px;
+							display: block;
+							width: 10px;
+							height: 10px;
+							background:#FFF;
+							border-radius: 50%;
+							opacity: .3;
+							filter:alpha(opacity=30);
+							overflow: hidden;
+						}
+						.point1{
+							left: 10px;
+						}
+						.point2{
+							right: 10px;
+						}
+
+					}
+				}
+			}
+		}
+	}
+
+	/*指引*/
+	.guide-wrap{
+		position: relative;
+		z-index: 5;
+		.gesture{
+			position: absolute;
+			left: 451px;
+			_left:-70px;
+			top: 485px;
+			width: 68px;
+			height: 100px;
+			background: url(images/gesture.png) no-repeat 0 0;
+			overflow: hidden;
+		}
+		.guide-tips{
+			position: absolute;
+			left: 418px;
+			_left:-98px;
+			top: 378px;
+			width: 251px;
+			height: 119px;
+			background: url(images/guide_tips.png) no-repeat 0 0;
+			overflow: hidden;
+		}
+	}
+}
+
+/*尾部说明*/
+.game-desc-wrap{
+	/*float: left;*/
+	clear:both;
+	width: 910px;
+	margin: 0 auto;
+	padding: 0 40px 40px 40px;
+	background-color: #590099;
+	color: #FFF;
+	.desc-head{
+		height: 30px;
+		clear:both;
+		i {	
+			float: left;
+			display: block;
+			width: 16px;
+			height: 12px;
+			margin-top: 10px;
+			overflow: hidden;
+			background:url(images/sprite_slot.png) no-repeat 0 -63px;
+		}
+		span{
+			float: left;
+			margin:0 10px;
+			font:bold 18px/30px 'Microsoft Yahei';
+			color: #ffd632;
+		}
+	}
+	.des-main{
+		clear: both;
+		font: normal 14px/24px 'Microsoft Yahei';
+		p{
+			word-break:break-all;
+			word-wrap: break-word; 
+			white-space: pre-wrap;
+		}
+		a {
+			color: #ffd632;
+			&:hover{
+				text-decoration:underline;
+			}
+		}
+		
+	}
+
+}
+
+/*弹出框*/
+.sn-dl-wrap{
+
+	.d-main{
+		/*margin-top: 45px;*/
+		font:bold 18px/24px 'Microsoft Yahei';
+		color: #333;
+		text-align: center;
+		span{
+			color: #d22223;
+		}
+	}
+	.dialog-tips{
+		margin-top: 5px;
+		font: normal 14px/24px 'Microsoft Yahei';
+		color: #999;
+		text-align: center;
+	}
+	.dialog-scan{
+		margin-top: 5px;
+		color: #333;
+		text-align: center;
+		font:normal 14px/24px 'Microsoft Yahei';
+		a{
+			color: #0284d2;
+			text-decoration: none;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	.d-confirm{
+		display: block;
+		width: 124px;
+		height: 34px;
+		margin: 30px auto 20px auto;
+		background-color: #d22223;
+		font:bold 16px/34px 'Microsoft Yahei';
+		color: #FFF;
+		text-align: center;
+		overflow: hidden;
+	}
+	.scan-coupon{
+		display: block;
+		width: 124px;
+		height: 34px;
+		margin: 30px auto;
+		background-color: #d22223;
+		font:bold 16px/34px 'Microsoft Yahei';
+		color: #FFF;
+		text-align: center;
+		overflow: hidden;	
+	}
+}
+
+/*蒙层*/
+.mask-zone{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	.mask{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+		opacity: 0.8;
+		filter:alpha(opacity=80);
+	}
+	.mask-content{
+		position: fixed;
+		top:50%;
+		left: 50%;
+		margin-left: -314px; 
+		margin-top: -320px;
+		width: 628px;
+		.mask-img{
+			width: 628px;
+			height: 500px;
+			img{
+				display: block;
+				width: 628px;
+				height: 500px;
+			}
+		}
+		.mask-btn{
+			display: block;
+			width: 320px;
+			height: 85px;
+			margin:40px auto 0 auto;
+			background: url(images/mask_btn.png) no-repeat 0 0;
+			overflow: hidden;
+			font-size: 40px;
+			line-height: 84px;
+			text-decoration: none;
+			text-align: center;
+			color: #FFF;
+		}
+	}
+}

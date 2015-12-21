@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>云钻大乐透</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.suning.com/favicon.ico">
+    <meta name="keywords" content="&#x9879;&#x76EE;&#x5173;&#x952E;&#x8BCD;">
+    <meta name="description" content="&#x9879;&#x76EE;&#x63CF;&#x8FF0;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script>
+        var sn = sn || {}
+    </script>
+
+    <link rel="stylesheet" href="./assets/css/bigLotto.css">
+</head>
+<body>
+    <script type="text/javascript" async="true">
+        function _adaptFont(maxWidth, baseWidth,baseSize){
+            maxWidth = 750;//最大值750px
+            baseWidth = 320;
+            baseSize = 16;
+            var winWidth =  parseInt(window.innerWidth);   /*s4手机读到的winWidth是分辨率的宽*/
+            var docWidth =  parseInt(document.documentElement.clientWidth);  //和winWidth区别是，减去右边滚动条
+            var bodyWidth =  parseInt(document.body.clientWidth);   //混合模式下使用
+            var docWidth = Math.min(winWidth, bodyWidth, docWidth);
+            docWidth > maxWidth && (docWidth = maxWidth);
+            docWidth < baseWidth && (docWidth = baseWidth);
+            //设置基准值
+            document.documentElement.style.fontSize =  (docWidth/baseWidth)*baseSize + 'px';
+        }
+        _adaptFont();
+    </script>
+    <!-- 自适应屏幕 ]] -->
+    <!-- 活动规则 [[ -->
+    <article class="et-wrap">
+        <!-- 顶部返回标题 ]] -->
+        <section class="et-content">
+            <h1>活动规则：</h1>
+            <p>活动规则活动规则活动规则活动规则活动规则活动规则活动规则</p>
+            <p>活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则</p>
+            <p>活动规则活动规则活动规则活动规则活动规则活动规则活动规则</p>
+        </section>
+    </article>
+    <!-- 活动规则 ]] -->
+    <script>
+        //页面尺寸自适应
+        (function(){
+            window.addEventListener("resize",_adaptFont);
+        })();
+        //返回上一个页面
+        document.getElementById("J-back").addEventListener("touchstart", function () {
+            window.history.go(-1);
+        });
+    </script>
+</body>
+</html>

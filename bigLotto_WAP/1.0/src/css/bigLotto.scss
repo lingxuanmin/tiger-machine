@@ -1,0 +1,596 @@
+@function toRem($px) {
+	@return 64px * $px / 75px / 32px * 1rem;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, form, fieldset, legend, button, input, textarea, th, td {
+	margin: 0;
+	padding: 0;
+}
+body, button, input, select, textarea {
+	font: 12px/1.5 arial, tahoma, \5FAE\8F6F\96C5\9ED1, \5b8b\4f53;
+}
+body {
+	background: #FFF;
+	color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+}
+em, i {
+	font-style: normal;
+}
+fieldset, img {
+	border: 0;
+}
+ul, ol, li {
+	list-style: none;
+}
+button, input, select, textarea {
+	font-size: 100%;
+	outline: none
+}
+textarea {
+	resize: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	color: #333;
+	text-decoration: none;
+	outline: none;
+}
+a:hover {
+	color: #F60;
+	text-decoration: underline;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	zoom: 1;
+}
+//大乐透样式
+.bl-wrap {
+	width: toRem(750px);
+	height: toRem(1320px);
+	margin: 0 auto;
+
+	.bl-top {
+		width: toRem(750px);
+		height: toRem(178px);
+		padding-top: toRem(158px);
+		background: url(images/bl-top.jpg) no-repeat;
+		background-size: toRem(750px) toRem(336px);
+
+		.bl-top-info {
+			height: toRem(56px);
+			line-height: toRem(28px);
+			color: #ffeb99;
+			font-size: toRem(24px);
+			text-align: center;
+
+			.max-multiple {
+				width: toRem(170px);
+				height: toRem(28px);
+				margin: 0 auto;
+				white-space: nowrap;
+				overflow: hidden;
+
+				.multiple {
+					color: #fff;
+				}
+			}
+			.max-number {
+				width: toRem(270px);
+				height: toRem(28px);
+				margin: 0 auto;
+				white-space: nowrap;
+				overflow: hidden;
+
+				.number {
+					color: #fff;
+				}
+			}
+		}
+		.residue-number {
+			width: toRem(270px);
+			height: toRem(28px);
+			margin: toRem(76px) auto 0;
+			line-height: toRem(28px);
+			color: #fff;
+			font-size: toRem(24px);
+			text-align: center;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+	}
+	.bl-game {
+		position: relative;
+		width: toRem(750px);
+		height: toRem(470px);
+		padding-top: toRem(84px);
+		background: url(images/bl-game.jpg) no-repeat;
+		background-size: toRem(750px) toRem(554px);
+
+		.game-card {
+			width: toRem(537px);
+			height: toRem(191px);
+			margin: 0 auto;
+
+			.card {
+				float: left;
+				width: toRem(143px);
+				height: toRem(191px);
+				margin: 0 toRem(18px);
+				background: url(images/card.png) repeat-y 0 0;
+				background-size: toRem(143px) toRem(764px);
+				overflow: hidden;
+			}
+		}
+		.game-option {
+			position: relative;
+			width: toRem(597px);
+			height: toRem(216px);
+			margin: toRem(56px) auto 0;
+
+			.game-gaid {
+				position: absolute;
+				width: toRem(375px);
+				height: toRem(244px);
+				top: toRem(-100px);
+				left: toRem(200px);
+
+				.game-gaid-text {
+					position: absolute;
+					z-index: 98;
+					width: toRem(373px);
+					height: toRem(178px);
+					background: url(images/game-gaid-text.png) no-repeat;
+					background-size: toRem(373px) toRem(178px);
+				}
+				.game-gaid-hand {
+					position: absolute;
+					top: toRem(190px);
+					left: toRem(230px);
+					z-index: 99;
+					width: toRem(77px);
+					height: toRem(113px);
+					background: url(images/game-gaid-hand.png) no-repeat;
+					background-size: toRem(77px) toRem(113px);
+					animation: hand 800ms ease-in-out infinite;
+				}
+			}
+			.game-bet {
+				position: relative;
+				padding-top: toRem(25px);
+
+				.bet-num-view {
+					width: toRem(194px);
+					height: toRem(64px);
+					margin: 0 auto toRem(28px);
+					padding: 0 toRem(30px);
+					border: toRem(2px) solid #f1a500;
+					border-radius: toRem(8px);
+					background-color: #490802;
+
+					.bet-num {
+						display: inline-block;
+						width: toRem(134px);
+						height: toRem(64px);
+						line-height: toRem(64px);
+						color: #fff;
+						font-size: toRem(40px);
+						text-align: center;
+						overflow: hidden;
+					}
+					.bet-unit {
+						display: inline-block;
+						width: toRem(60px);
+						height: toRem(56px);
+						padding-top: toRem(8px);
+						line-height: toRem(56px);
+						color: #fed63d;
+						font-size: toRem(24px);
+						overflow: hidden;
+					}
+				}
+				.bet-btn {
+					position: absolute;
+					top: toRem(20px);
+					width: toRem(96px);
+					height: toRem(96px);
+
+					&.subtract {
+						left: toRem(30px);
+						background: url(images/bet-subtract.png) no-repeat;
+						background-size: toRem(90px) toRem(90px);
+					}
+					&.subtract-on {
+						left: toRem(30px);
+						background: url(images/bet-subtract-on.png) no-repeat;
+						background-size: toRem(90px) toRem(90px);
+					}
+					&.subtract-dis {
+						left: toRem(30px);
+						background: url(images/bet-subtract-dis.png) no-repeat;
+						background-size: toRem(90px) toRem(90px);
+					}
+					&.add {
+						right: toRem(30px);
+						background: url(images/bet-add.png) no-repeat;
+						background-size: toRem(90px) toRem(90px);
+					}
+					&.add-on {
+						right: toRem(30px);
+						background: url(images/bet-add-on.png) no-repeat;
+						background-size: toRem(90px) toRem(90px);
+					}
+					&.add-dis {
+						right: toRem(30px);
+						background: url(images/bet-add-dis.png) no-repeat;
+						background-size: toRem(90px) toRem(90px);
+					}
+				}
+			}
+			.game-btn {
+				width: toRem(255px);
+				height: toRem(76px);
+				margin: 0 auto;
+				background: url(images/game-button.png) no-repeat;
+				background-size: toRem(255px) toRem(76px);
+				line-height: toRem(76px);
+				color: #fff;
+				font-size: toRem(40px);
+				text-align: center;
+				white-space: nowrap;
+				cursor: pointer;
+				overflow: hidden;
+			}
+			.game-btn-on {
+				width: toRem(255px);
+				height: toRem(76px);
+				margin: 0 auto;
+				background: url(images/game-button-on.png) no-repeat;
+				background-size: toRem(255px) toRem(76px);
+				line-height: toRem(76px);
+				color: #fff;
+				font-size: toRem(40px);
+				text-align: center;
+				white-space: nowrap;
+				cursor: pointer;
+				overflow: hidden;
+			}
+		}
+		.star {
+			display: block;
+			position: absolute;
+			width: toRem(90px);
+			height: toRem(90px);
+			background: url(images/star.png) no-repeat;
+			background-size: toRem(90px) toRem(90px);
+			animation: star 3s ease-in-out infinite;
+
+			&.star1 {
+				top: toRem(20px);
+				left: toRem(150px);
+			}
+			&.star2 {
+				top: toRem(20px);
+				left: toRem(330px);
+			}
+			&.star3 {
+				top: toRem(20px);
+				left: toRem(510px);
+			}
+			&.star4 {
+				top: toRem(250px);
+				left: toRem(150px);
+			}
+			&.star5 {
+				top: toRem(250px);
+				left: toRem(330px);
+			}
+			&.star6 {
+				top: toRem(250px);
+				left: toRem(510px);
+			}
+		}
+	}
+	.bl-rule {
+		width: toRem(750px);
+		height: toRem(143px);
+		padding-top: toRem(45px);
+		background: url(images/bl-rule.jpg) no-repeat;
+		background-size: toRem(750px) toRem(189px);
+
+		.rule-text {
+			width: toRem(440px);
+			height: toRem(60px);
+			margin: 0 auto;
+			line-height: toRem(30px);
+			color: #353d44;
+			font-size: toRem(26px);
+			text-align: center;
+			overflow: hidden;
+		}
+		.rule-view {
+			display: block;
+			width: toRem(165px);
+			height: toRem(30px);
+			margin: toRem(15px) auto 0;
+			line-height: toRem(30px);
+			color: #2f8ffd;
+			font-size: toRem(26px);
+			text-align: center;
+		}
+	}
+	.bl-lucky {
+		width: toRem(750px);
+		height: toRem(215px);
+		padding-top: toRem(27px);
+		background: url(images/bl-lucky.jpg) no-repeat;
+		background-size: toRem(750px) toRem(242px);
+
+		.lucky-title {
+			width: toRem(165px);
+			height: toRem(50px);
+			margin: 0 auto toRem(25px);
+			line-height: toRem(50px);
+			color: #fff;
+			font-size: toRem(30px);
+			text-align: center;
+			overflow: hidden;
+		}
+		.winner-none {
+			width: toRem(460px);
+			height: toRem(50px);
+			margin: toRem(40px) auto;
+			line-height: toRem(50px);
+			color: #ffdd00;
+			font-size: toRem(36px);
+			text-align: center;
+			overflow: hidden;
+		}
+		.winner {
+			position: relative;
+			width: toRem(460px);
+			height: toRem(100px);
+			margin: 0 auto;
+			overflow: hidden;
+
+			li {
+				position: absolute;
+				width: toRem(460px);
+				height: toRem(50px);
+
+				.win-user {
+					display: block;
+					float: left;
+					width: toRem(200px);
+					height: toRem(50px);
+					line-height: toRem(50px);
+					color: #ffdd00;
+					font-size: toRem(26px);
+					font-weight: bold;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+				.win-result {
+					display: block;
+					float: right;
+					width: toRem(140px);
+					height: toRem(50px);
+					line-height: toRem(50px);
+					color: #fff;
+					font-size: toRem(26px);
+					white-space: nowrap;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+}
+
+/*弹框*/
+.fail-detail {
+	padding: toRem(75px) 0 toRem(65px);
+
+	p {
+		margin-bottom: toRem(10px);
+		line-height: toRem(36px);
+		color: #353d44;
+		font-size: toRem(30px);
+		text-align: center;
+
+		&.small-tips {
+			line-height: toRem(24px);
+			color: #797979;
+			font-size: toRem(20px);
+		}
+	}
+}
+.dl-btn {
+	height: toRem(90px);
+	border-top: 1px solid #dcdcdc;
+
+	a {
+		float: left;
+		width: toRem(318px);
+		height: toRem(88px);
+		font-size: toRem(34px);
+		line-height: toRem(88px);
+		text-align: center;
+
+		&:hover {
+			text-decoration: none;
+		}
+		&.dl-close {
+			color: #50575d;
+			border-right: 1px solid #ddd;
+		}
+		&.dl-jump {
+			color: #f29400;
+		}
+	}
+}
+.fail-btn {
+	height: toRem(90px);
+	border-top: 1px solid #dcdcdc;
+
+	a {
+		float: left;
+		width: 100%;
+		height: toRem(88px);
+		line-height: toRem(88px);
+		color: #f29400;
+		font-size: toRem(34px);
+		text-align: center;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+//活动规则
+.et-wrap {
+	width: toRem(750px);
+	max-width: 750px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+.ml-header {
+	position: fixed;
+	top: 0;
+	width: toRem(750px);
+	height: toRem(76px);
+	background: #f8f8f8;
+	z-index: 20;
+
+	ul {
+		display: flex;
+		height: toRem(76px);
+	}
+	li {
+		flex: 1 1;
+		height: 100%;
+
+		&:nth-child(1) {
+			i {
+				display: block;
+				width: toRem(23px);
+				height: toRem(76px);
+				margin-left: toRem(28px);
+				background: url(images/header_icon.png) no-repeat;
+				background-size: toRem(23px) toRem(76px);
+			}
+			cursor: pointer;
+		}
+		&:nth-child(2) {
+			flex: 3 3;
+			font-size: toRem(32px);
+			line-height: toRem(76px);
+			color: #353d44;
+			text-align: center;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+	}
+}
+.et-content {
+	// background: #ffdfdf;
+
+	h1 {
+		padding: 0 toRem(40px);
+		font-size: toRem(30px);
+		font-weight: normal;
+		line-height: toRem(38px);
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	p {
+		margin-top: toRem(28px);
+		padding: 0 toRem(40px);
+		font-size: toRem(26px);
+		line-height: toRem(34px);
+	}
+}
+@keyframes hand {
+	0% {
+		top: toRem(190px);
+		left: toRem(230px);
+	}
+	50% {
+		top: toRem(180px);
+		left: toRem(240px);
+	}
+	100% {
+		top: toRem(190px);
+		left: toRem(230px);
+	}
+}
+@keyframes star {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.6;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/*蒙层*/
+.mask-zone{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	.mask{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.8);
+	}
+	.mask-content{
+		position: fixed;
+		top:50%;
+		left: 50%;
+		margin-top: toRem(-320px);
+		margin-left: toRem(-314px); 
+		width: toRem(628px);
+		.mask-img{
+			width: toRem(628px);
+			height: toRem(500px);
+			img{
+				display: block;
+				width: toRem(628px);
+				height: toRem(500px);
+			}
+		}
+		.mask-btn{
+			display: block;
+			width: toRem(320px);
+			height: toRem(85px);
+			margin:toRem(40px) auto 0 auto;
+			background:url(images/mask_btn.png) no-repeat;
+			background-size: toRem(320px) toRem(85px);
+			overflow: hidden;
+			font-size: toRem(40px);
+			line-height: toRem(85px);
+			text-decoration: none;
+			text-align: center;
+			color: #FFF;
+		}
+	}
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>弹框demo</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <script>
+        var sn = sn || {}
+    </script>
+
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- build:css ./assets/css/sn_dialog.css -->
+    <link rel="stylesheet" href="css/sn_dialog.scss" />
+    <!-- endbuild -->
+
+    <!-- build:css ./assets/css/diamSlot.css -->
+    <link rel="stylesheet" type="text/css" href="css/diamSlot.scss">
+    <!-- endbuild -->
+
+</head>
+<body>
+    <!-- handle [[ -->
+    <div class="dl-btn">
+        <a href="javascript:void(0);" data-width="410" mess-class="#dialog1" dialog-id="dia1" layey-id="layer1">弹框类型1</a>
+        <a href="javascript:void(0);" data-width="370" mess-class="#dialog2" dialog-id="dia2" layey-id="layer2">弹框类型2</a>
+       
+    </div>
+    <!-- handle ]] -->
+
+    <div class="dl">
+        <!-- 弹框类型1 [[ -->
+        <div class="sn-dl1" style="display: none;">
+            <!-- 弹框内容 [[ -->
+            <div class="sn-dl-wrap" id="dialog1">
+                <div class="d-main">
+                    你正在使用<span>100云钻兑换1张10元无敌券</span>。
+                </div>
+                <div class="dialog-tips">(无敌券可在大聚惠、抢购、团购等活动中使用)</div>
+                <a href="javascript:void(0);" class="d-confirm">确认</a>
+                
+            </div>
+ 
+            <!-- 弹框内容 ]] -->
+        </div>
+
+        <!-- 弹框类型1 ]] -->
+
+         <!-- 弹框类型2[[ -->
+        <div class="sn-dl1" style="display: none;">
+            <!-- 弹框内容 [[ -->
+            <div class="sn-dl-wrap" id="dialog2">
+                <div class="d-main">
+                    你已兑换过啦，赶快去使用吧。
+                </div>
+                <div class="dialog-scan">请至<a href="#" class="my-sn"> 我的易购</a> > <a href="#" class="my-coupon">我的优惠券</a> 查看。</div>
+                <a href="javascript:void(0);" class="scan-coupon">查看优惠券</a>
+                
+            </div>
+ 
+            <!-- 弹框内容 ]] -->
+        </div>
+
+        <!-- 弹框类型2 ]] -->
+
+        
+    </div>
+
+    <!-- build:js ./assets/js/dialog.js -->
+    <script type="text/javascript" src="js/dialog.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js ./assets/js/vipNew.js -->
+    <script type="text/javascript" src="js/vipNew.js"></script>
+    <!-- endbuild -->
+
+
+    
+
+    <script>
+        $(".dl-btn a").on("click", function () {
+            var $this = $(this),
+                nWidth = $this.attr("data-width"),
+                sMess = $this.attr("mess-class"),
+                sLayerId = $this.attr("layer-id"),
+                sID = $this.attr("dialog-id");
+            fnShowDialog(nWidth, sMess, sID, sLayerId);
+        });
+        function fnShowDialog(_width, _mess, _id, _layerId) {
+            $("#" + _id).sDialog({
+                css: {
+                    width: _width,
+                    border: "none",
+                    padding: 0,
+                    borderRadius: 0
+                },
+                titleCss: {
+                    closeURL: "assets/css/images/n_close.png"
+                },
+                mark: {
+                    dialog: _id,
+                    layer: _layerId
+                },
+                message: _mess,
+                title: "",
+                layerClick: true,
+                show: "faller",
+                openFn: function () {
+                    if ($(".sn-pop-wrap").length > 0) {
+                        $(".sn-pop-wrap").addClass("J-position").removeClass("J-position");
+                    }
+                    vipNew.fnAppoint();
+                }
+            });
+        }
+        function eCodeCalendar(_boxID, _showID, n) {
+            ECode.calendar({
+                inputBox: _boxID,
+                showbox: _showID,
+                isSelect: true,
+                isWeek: false,
+                selectRange: {
+                    min: 1899,
+                    max: 2099
+                },
+                range: {
+                    mindate: "1900-01-01",
+                    maxdate: "2099-12-31"
+                },
+                callback: function () {
+                    var _this = $(_showID);
+                    if (n == 1) {
+                        constellation(_this);
+                    }
+                }
+
+            });
+        }
+
+    </script>
+</body>
+</html>
